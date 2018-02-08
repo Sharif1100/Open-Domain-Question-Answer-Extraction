@@ -1,0 +1,175 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Question Answering System
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://use.fontawesome.com/02954b8ed1.js"></script>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="gwt-title">
+        <p>Question Answering System</p>
+    </div>
+
+    <div id="opt">
+        <table>
+            <tr>
+                <td><a href="/">
+                    <div class="gwt-option-block-blue">
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Home</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('ask_me') }}">
+                    <div class="gwt-option-block-orange">
+                        <p><i class="fa fa-search" aria-hidden="true"></i> Ask Me</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="slides.ppt">
+                        <div class="gwt-option-block">
+                            <p><i class="fa fa-sliders" aria-hidden="true"></i> Project Presentation</p>
+                        </div>
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="report.pdf">
+                    <div class="gwt-option-block-purple">
+                        <p><i class="fa fa-paperclip" aria-hidden="true"></i> Research Report</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a href="src/">
+                    <div class="gwt-option-block-blue">
+                        <p><i class="fa fa-file" aria-hidden="true"></i> Research Source Code</p>
+                    </div>
+                </a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="gwt-explanation">
+        <div id="title" style="text-align: center">Please Ask Your Question</div>
+        <div style="text-align: center;">
+            {{ wtf.quick_form(form, button_map={'submit_button': 'primary'}) }}
+        </div>
+
+        <div class="container" style="width: 800px">
+            <table class="table table-borderless">
+                <thead>
+                <tr>
+                    <th><h3>Geography</h3></th>
+                    <th><h3>Science</h3></th>
+                    <th><h3>General</h3></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <li>Where is Southeast University Bangladesh?</li>
+                    </td>
+                    <td>
+                        <li>Why is the sky blue?</li>
+                    </td>
+                    <td>
+                        <li>What instrument does Jimi Hendrix play?</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>What is the current GDP of Bangladesh?</li>
+                    </td>
+                    <td>
+                        <li>When was Einstein born?</li>
+                    </td>
+                    <td>
+                        <li>Who is the president of Bangladesh?</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>How many people live in Alaska?</li>
+                    </td>
+                    <td>
+                        <li>Who invented the telegraph?</li>
+                    </td>
+                    <td>
+                        <li>When was Cristiano Ronaldo born?</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>What is the capital of India?</li>
+                    </td>
+                    <td>
+                        <li>What is TCP/IP?</li>
+                    </td>
+                    <td>
+                        <li>Who wrote Harry Potter?</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>Which is the world's highest mountain?</li>
+                    </td>
+                    <td>
+                        <li>Who invented the telegraph?</li>
+                    </td>
+                    <td>
+                        <li>Who directed the Thor Ragnarok?</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>Which is the longest river in the world?</li>
+                    </td>
+                    <td>
+                        <li>Who invented the internet?</li>
+                    </td>
+                    <td>
+                        <li>Golf player Vijay Singh belongs to which country?</li>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <li>Where is louvre museum located?</li>
+                    </td>
+                    <td>
+                        <li>What is python programming language?</li>
+                    </td>
+                    <td>
+                        <li>How many people live on earth?</li>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="gwt-info">
+        <div style="text-align: center;">
+            <p><b><i class="fa fa-users" aria-hidden="true"></i><u> Research Group</u></b></p>
+        </div>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Md.Asraful Islam</p>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Shariful Islam Sharif</p>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Abu Ishtiaque Md Fahim</p>
+        <div style="text-align: center;">
+            <p><b><i class="fa fa-tripadvisor" aria-hidden="true"></i><u> Supervised By</u></b></p>
+        </div>
+        <p style="text-align: center"> Rajon Bardhan</p>
+        <p style="text-align: center"> Lecturer, Dept. of CSE</p>
+        <p style="text-align: center"> Southeast University</p>
+    </div>
+{% endblock %}

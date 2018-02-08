@@ -1,0 +1,12 @@
+Flask == 0.12.2
+Flask-Bootstrap == 3.3.7.1
+Flask-WTF ==  0.14.2
+WTForms == 2.1
+Flask-Appconfig == 0.11.1
+Wolframalpha == 3.0
+Gevent == 1.2.2
+Google == 1.9.3
+nltk == 3.2.5
+Pycorenlp == 0.3.0
+Wikipedia == 1.4.0
+

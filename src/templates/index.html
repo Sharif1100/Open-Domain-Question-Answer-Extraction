@@ -1,0 +1,114 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+    Question Answering System
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://use.fontawesome.com/02954b8ed1.js"></script>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="gwt-title">
+        <p>Question Answering System</p>
+    </div>
+
+    <div id="opt">
+        <table>
+            <tr>
+                <td><a href="/">
+                    <div class="gwt-option-block-blue">
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Home</p>
+
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('ask_me') }}">
+                    <div class="gwt-option-block-orange">
+                        <p><i class="fa fa-search" aria-hidden="true"></i> Ask ME</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="slides.ppt">
+                        <div class="gwt-option-block">
+                            <p><i class="fa fa-sliders" aria-hidden="true"></i> Research Presentation</p>
+                        </div>
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="report.pdf">
+                    <div class="gwt-option-block-purple">
+                        <p><i class="fa fa-paperclip" aria-hidden="true"></i> Research Report</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a href="src/">
+                    <div class="gwt-option-block-blue">
+                        <p><i class="fa fa-file" aria-hidden="true"></i> Research Source Code</p>
+                    </div>
+                </a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="gwt-explanation">
+        <div id="title">Introduction</div>
+        <p>
+            Question answering systems is a wide and active area, with much scope of further
+            research. In our Research we look into the semantics of the web search (Google and
+            Wikipedia resource) to answer the questions, asked from the user. The principal
+            algorithm used is WEB SEARCH to find the sentences, in which the topic is similar to the
+            query. Then we use cosine similarity algorithm to rank the answers.</p>
+        <h2>What is a Open domain question answering System ?</h2>
+        <p>In order for the computers to interact with the users more naturally,the
+            computer must understand and infer what the user wants to say from what he
+            actually says(the latent meaning). Question Answering System (referred to
+            QAS henceforth) is basically a search program that strives to give the best
+            possible answers to the questions asked. In information retrieval, an open
+            domain question answering system aims at returning an answer in response to
+            the user's question. The returned answer is in the form of short texts rather
+            than a list of relevant documents. The system uses a combination of techniques
+            from computational linguistics, information retrieval and knowledge representation
+            for finding answers.There is a two-fold complexity of the question which must be considered,
+            before answering a question:
+
+        <ul>
+            <li>Acquire user’s true intentions from question</li>
+            <li>The answer should be complete in best possible way and at same time
+                non-redundant
+            </li>
+        </ul>
+        We use Wikipedia and Google search resource as the web knowledge base as this specific knowledge
+        database usually contains the entire information needed to answer a complex
+        question.
+        </p>
+        <h2>Our Approach</h2>
+        <p>Their can be many types of Question Answering system. But, in our project, we have focused on descriptive
+            question answering, where the system gives the most probable sentence as the answer, to the question asked,
+            from its KB. To get the implementational details of the project have a look on the report, that describes it's deepest
+            quirk.
+        </p>
+    </div>
+
+    <div class="gwt-info">
+        <div style="text-align: center;">
+            <p><b><i class="fa fa-users" aria-hidden="true"></i><u> Research Group</u></b></p>
+        </div>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Md.Asraful Islam</p>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Shariful Islam Sharif</p>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Abu Ishtiaque Md Fahim</p>
+        <div style="text-align: center;">
+            <p><b><i class="fa fa-tripadvisor" aria-hidden="true"></i><u> Supervised By</u></b></p>
+        </div>
+        <p style="text-align: center"> Rajon Bardhan</p>
+        <p style="text-align: center"> Lecturer, Dept. of CSE</p>
+        <p style="text-align: center"> Southeast University</p>
+    </div>
+{% endblock %}

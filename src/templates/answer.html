@@ -1,0 +1,88 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+    Question Answering System
+{% endblock %}
+
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <script src="https://use.fontawesome.com/02954b8ed1.js"></script>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="gwt-title">
+        <p>Question Answering System</p>
+    </div>
+
+    <div id="opt">
+        <table>
+            <tr>
+                <td><a href="/">
+                    <div class="gwt-option-block-blue">
+                        <p><i class="fa fa-home" aria-hidden="true"></i> Home</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a href="{{ url_for('ask_me') }}">
+                    <div class="gwt-option-block-orange">
+                        <p><i class="fa fa-search" aria-hidden="true"></i> Ask Me</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="slides.ppt">
+                        <div class="gwt-option-block">
+                            <p><i class="fa fa-sliders" aria-hidden="true"></i> Research Presentation</p>
+                        </div>
+                    </a></td>
+            </tr>
+            <tr>
+                <td><a href="report.pdf">
+                    <div class="gwt-option-block-purple">
+                        <p><i class="fa fa-paperclip" aria-hidden="true"></i> Research Report</p>
+                    </div>
+                </a></td>
+            </tr>
+            <tr>
+                <td><a href="src/">
+                    <div class="gwt-option-block-blue">
+                        <p><i class="fa fa-file" aria-hidden="true"></i> Research Source Code</p>
+                    </div>
+                </a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="gwt-explanation">
+        <div id="title" style="text-align: center">Question</div>
+        <h2 style="text-align: center">{{ question }}</h2>
+        <div id="title1" style="text-align: center">Answer</div>
+        <h2 style="text-align: left">{{ answer }}</h2>
+
+        <div style="text-align: center">
+            <a href="{{ url_for('ask_me') }}" class="btn btn-primary" role="button">
+                Have another question
+            </a>
+        </div>
+
+    </div>
+
+    <div class="gwt-info">
+        <div style="text-align: center;">
+            <p><b><i class="fa fa-users" aria-hidden="true"></i><u> Research Group</u></b></p>
+        </div>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Md.Asraful Islam</p>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Shariful Islam Sharif</p>
+        <p><i class="fa fa-user-o" aria-hidden="true"></i> Abu Ishtiaque Md Fahim</p>
+        <div style="text-align: center;">
+            <p><b><i class="fa fa-tripadvisor" aria-hidden="true"></i><u> Supervised By</u></b></p>
+        </div>
+        <p style="text-align: center"> Rajon Bardhan</p>
+        <p style="text-align: center"> Lecturer, Dept. of CSE</p>
+        <p style="text-align: center"> Southeast University</p>
+    </div>
+{% endblock %}
